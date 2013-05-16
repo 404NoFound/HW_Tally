@@ -31,11 +31,7 @@ namespace TW_Tally.Forms
 
         }
 
-        private void textBoxCost_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+        
         private void textBoxCost_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!((e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '.' || e.KeyChar == ''))
@@ -46,13 +42,14 @@ namespace TW_Tally.Forms
             {
                 if (e.KeyChar == '.')
                 {
-                    //  string str = textBox_Money.Text;
-                    //int num = str.IndexOf('.');
-                    // if (num != -1)
+                    string str = textBoxCost.Text.Trim(); ;
+                    int num = str.IndexOf('.');
+                    if (num != -1)
                     {
                         e.Handled = true;
                     }
                 }
+               
             }
         }
     }
