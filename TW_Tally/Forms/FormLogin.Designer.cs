@@ -31,6 +31,7 @@
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.button_Login = new System.Windows.Forms.Button();
             this.button_Register = new System.Windows.Forms.Button();
+            this.labelNormalPassword = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox_Password
@@ -42,6 +43,7 @@
             this.textBox_Password.Size = new System.Drawing.Size(165, 21);
             this.textBox_Password.TabIndex = 1;
             this.textBox_Password.UseSystemPasswordChar = true;
+            this.textBox_Password.MouseMove += new System.Windows.Forms.MouseEventHandler(this.textBox_Password_MouseMove);
             // 
             // button_Login
             // 
@@ -64,6 +66,14 @@
             this.button_Register.UseVisualStyleBackColor = true;
             this.button_Register.Click += new System.EventHandler(this.button_Register_Click);
             // 
+            // labelNormalPassword
+            // 
+            this.labelNormalPassword.AutoSize = true;
+            this.labelNormalPassword.Location = new System.Drawing.Point(600, 371);
+            this.labelNormalPassword.Name = "labelNormalPassword";
+            this.labelNormalPassword.Size = new System.Drawing.Size(0, 12);
+            this.labelNormalPassword.TabIndex = 4;
+            // 
             // FormLogin
             // 
             this.AcceptButton = this.button_Login;
@@ -71,6 +81,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TW_Tally.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(1008, 611);
+            this.Controls.Add(this.labelNormalPassword);
             this.Controls.Add(this.button_Register);
             this.Controls.Add(this.button_Login);
             this.Controls.Add(this.textBox_Password);
@@ -89,6 +100,7 @@
         private System.Windows.Forms.TextBox textBox_Password;
         private System.Windows.Forms.Button button_Login;
         private System.Windows.Forms.Button button_Register;
+        private System.Windows.Forms.Label labelNormalPassword;
      
        
       

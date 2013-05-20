@@ -18,8 +18,8 @@ using System.IO;
 namespace TW_Tally.Forms
 {
     public partial class FormRegister : Form
-    {   
-        
+    {
+        FormMessageAutoClose auth = new FormMessageAutoClose();
       public  string strConnection = @" Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\App_Data\userDB.mdb";
         public FormRegister()
         {
@@ -55,10 +55,6 @@ namespace TW_Tally.Forms
 
         private void Form_Register_Load(object sender, EventArgs e)
         {
-            
-            // TODO: 这行代码将数据加载到表“userDBDataSet.UserList”中。您可以根据需要移动或删除它。
-          //  this.userListTableAdapter.Fill(this.userDBDataSet.UserList);
-          
         }
 
         
@@ -75,29 +71,28 @@ namespace TW_Tally.Forms
 
         private void button_Reg_Click(object sender, EventArgs e)
         {
-           /* if (TextBox_UserName.Text.Length < 5 || TextBox_UserName.Text.Length > 20)
-            {
-                MessageBox.Show("用户名请在5至20个字符内。");
-                this.TextBox_UserName.Focus();
-            }*/
+           
             //////////////////////////////////////////////////////////////////////////
             string pattern = @"^[A-Za-z0-9]{6,20}$";
             Match mPassWord = Regex.Match(this.TextBoxNewPassword.Text, pattern);
             //////////////////////////////////////////////////////////////////////////
             //旧密码MD5    
             string sOldPassword = textBoxOldPassword.Text.Trim();
+            sOldPassword += "abc";
+
             string sOldPasswordmd5 = FormsAuthentication.HashPasswordForStoringInConfigFile(sOldPassword, "MD5");
             string sOldPasswordmd5Twice = FormsAuthentication.HashPasswordForStoringInConfigFile(sOldPasswordmd5, "MD5");
-         
-              //////////////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////////////
             //新密码MD5
              string sNewPassWord=TextBoxNewPassword.Text;
+             sNewPassWord += "abc";
+             
              string sNewPassWordmd5 = FormsAuthentication.HashPasswordForStoringInConfigFile(sNewPassWord, "MD5");
              string sNewPassWordmd5Twice = FormsAuthentication.HashPasswordForStoringInConfigFile(sNewPassWordmd5, "MD5");
-             string sUserLoginPath = @".\App_Data\userLogin.xml";
+             string sUserLoginPath = @".\App_Data\userLogin.dll";
              string sPassWordmd5Auth = File.ReadAllText(sUserLoginPath);
-
-             FormMessageAutoClose auth = new FormMessageAutoClose();
+           
+            
            if (sPassWordmd5Auth!=sOldPasswordmd5Twice)
             {
                 auth.setLabel("原始密码错误请重新输入");
@@ -125,7 +120,7 @@ namespace TW_Tally.Forms
                     }
                     else
                     {
-                        File.WriteAllText(@".\App_Data\userLogin.xml", sNewPassWordmd5Twice);
+                        File.WriteAllText(sUserLoginPath, sNewPassWordmd5Twice);
                         MessageBox.Show("密码修改。返回登录界面");
                         this.DialogResult = DialogResult.OK;
 
@@ -134,15 +129,7 @@ namespace TW_Tally.Forms
                 }
 
             }
-            
-
-            
-            
-            
-
-
-
-                try
+            try
             {
                
                

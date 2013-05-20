@@ -10,20 +10,21 @@ namespace TW_Tally.Class
 {
     class DataOpen
     {
-        //  private string DBLocation
-     //  private string strConnection = @" Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\App_Data\userDB.mdb";
-        //OleDbConnection objConnection = new OleDbConnection(strConnection); 
-        OleDbCommand comm = new OleDbCommand();
-        OleDbConnection objConnection = new OleDbConnection();
       
-       public void SetDB(string strConnection)
-        {
-            objConnection.ConnectionString = strConnection;
-
-
+        private string strConnection = @" Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\App_Data";
+       
+        OleDbCommand DBcomm = new OleDbCommand();
+        OleDbConnection DBConnection = new OleDbConnection();
+        OleDbDataAdapter DBDataAdapter = new OleDbDataAdapter();
+        
+            void setDB()
+            {
+                DBConnection.ConnectionString= strConnection;
+            }
         }
 
-        /* OleDbConnection con = new OleDbConnection(strConnection);
+  /*
+OleDbConnection con = new OleDbConnection(strConnection);
               OleDbCommand comm = new OleDbCommand();
               con.Open();
               string sSql = string.Format("SELECT UserName, PasswordMD5 FROM  UserList WHERE   (UserName) ='{0}'and (PasswordMD5)='{1}'", UserName, sPassWordmd5Twice);
@@ -52,4 +53,3 @@ namespace TW_Tally.Class
 
 
     }
-}

@@ -21,8 +21,9 @@ namespace TW_Tally.Forms
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-            string sUserLoginPath = @".\App_Data\userLogin.xml";
+            string sUserLoginPath = @".\App_Data\userLogin.dll";
             string PassWord = textBox_Password.Text.Trim();
+            PassWord += "abc";
             string sPassWordmd5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(PassWord, "MD5");
             string sPassWordmd5Twice
                 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sPassWordmd5, "MD5");
@@ -94,6 +95,11 @@ namespace TW_Tally.Forms
         private void FormLogin_Activated(object sender, EventArgs e)
         {
             textBox_Password.Focus();
+        }
+
+        private void textBox_Password_MouseMove(object sender, MouseEventArgs e)
+        {
+            labelNormalPassword.Text = "默认密码为 ‘000000’";
         }
 
 

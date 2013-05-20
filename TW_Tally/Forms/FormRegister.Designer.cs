@@ -33,9 +33,9 @@
             this.textBox_PasswordCheck = new System.Windows.Forms.TextBox();
             this.button_Reg = new System.Windows.Forms.Button();
             this.panel_Reg = new System.Windows.Forms.Panel();
-            this.TextBoxNewPassword = new System.Windows.Forms.TextBox();
-            this.labelOldPassword = new System.Windows.Forms.Label();
             this.textBoxOldPassword = new System.Windows.Forms.TextBox();
+            this.labelOldPassword = new System.Windows.Forms.Label();
+            this.TextBoxNewPassword = new System.Windows.Forms.TextBox();
             Label_Password = new System.Windows.Forms.Label();
             this.panel_Reg.SuspendLayout();
             this.SuspendLayout();
@@ -95,16 +95,15 @@
             this.panel_Reg.TabIndex = 8;
             this.panel_Reg.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Reg_Paint);
             // 
-            // TextBoxNewPassword
+            // textBoxOldPassword
             // 
-            this.TextBoxNewPassword.Location = new System.Drawing.Point(124, 62);
-            this.TextBoxNewPassword.Name = "TextBoxNewPassword";
-            this.TextBoxNewPassword.PasswordChar = '*';
-            this.TextBoxNewPassword.Size = new System.Drawing.Size(100, 21);
-            this.TextBoxNewPassword.TabIndex = 1;
-            this.TextBoxNewPassword.UseSystemPasswordChar = true;
-            this.TextBoxNewPassword.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
-            this.TextBoxNewPassword.Leave += new System.EventHandler(this.TextBox_Password_Leave);
+            this.textBoxOldPassword.Location = new System.Drawing.Point(124, 24);
+            this.textBoxOldPassword.Name = "textBoxOldPassword";
+            this.textBoxOldPassword.PasswordChar = '*';
+            this.textBoxOldPassword.Size = new System.Drawing.Size(100, 21);
+            this.textBoxOldPassword.TabIndex = 0;
+            this.textBoxOldPassword.UseSystemPasswordChar = true;
+            this.textBoxOldPassword.TextChanged += new System.EventHandler(this.textBoxOldPassword_TextChanged);
             // 
             // labelOldPassword
             // 
@@ -115,15 +114,16 @@
             this.labelOldPassword.TabIndex = 8;
             this.labelOldPassword.Text = "原密码:";
             // 
-            // textBoxOldPassword
+            // TextBoxNewPassword
             // 
-            this.textBoxOldPassword.Location = new System.Drawing.Point(124, 24);
-            this.textBoxOldPassword.Name = "textBoxOldPassword";
-            this.textBoxOldPassword.PasswordChar = '*';
-            this.textBoxOldPassword.Size = new System.Drawing.Size(100, 21);
-            this.textBoxOldPassword.TabIndex = 0;
-            this.textBoxOldPassword.UseSystemPasswordChar = true;
-            this.textBoxOldPassword.TextChanged += new System.EventHandler(this.textBoxOldPassword_TextChanged);
+            this.TextBoxNewPassword.Location = new System.Drawing.Point(124, 62);
+            this.TextBoxNewPassword.Name = "TextBoxNewPassword";
+            this.TextBoxNewPassword.PasswordChar = '*';
+            this.TextBoxNewPassword.Size = new System.Drawing.Size(100, 21);
+            this.TextBoxNewPassword.TabIndex = 1;
+            this.TextBoxNewPassword.UseSystemPasswordChar = true;
+            this.TextBoxNewPassword.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
+            this.TextBoxNewPassword.Leave += new System.EventHandler(this.TextBox_Password_Leave);
             // 
             // FormRegister
             // 
