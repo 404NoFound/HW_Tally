@@ -27,6 +27,8 @@ namespace TW_Tally.Forms
 
         private void FormCost_Load(object sender, EventArgs e)
         {
+            // TODO: 这行代码将数据加载到表“userDBDataSet1.MerchantList”中。您可以根据需要移动或删除它。
+        
            
           
 
@@ -84,8 +86,12 @@ namespace TW_Tally.Forms
             try
             {
                 
-;                userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
-this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
+               userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
+               this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
+               FormMessageAutoClose fm = new FormMessageAutoClose();
+               fm.setLabel("添加成功返回主界面。");
+               fm.ShowDialog();
+               this.DialogResult = DialogResult.OK;
 
             }
             catch (System.Exception ex)
@@ -98,6 +104,43 @@ this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
         private void FormCost_Activated(object sender, EventArgs e)
         {
             
+        }
+
+        private void comboBoxShop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void buttonSaveAgain_Click(object sender, EventArgs e)
+        {
+            DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
+            newCostLine["Cost"] = textBoxCost.Text.Trim();
+            newCostLine["Class"] = comboBoxBig.Text.Trim();
+            newCostLine["Event"] = comboBoxSmall.Text.Trim();
+            newCostLine["Merchant"] = comboBoxShop.Text.Trim();
+            newCostLine["CostData"] = dateTimePickerCost.Value;
+            newCostLine["Comments"] = textBoxComments.Text.Trim();
+            try
+            {
+
+                userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
+                this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
+                FormMessageAutoClose fm = new FormMessageAutoClose();
+                fm.setLabel("添加成功。");
+                fm.ShowDialog();
+                textBoxCost.Text = "";
+                comboBoxBig.Text = "";
+                comboBoxSmall.Text = "";
+                comboBoxShop.Text = "";
+                dateTimePickerCost.Value = DateTime.Now;
+                textBoxComments.Text = "";
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

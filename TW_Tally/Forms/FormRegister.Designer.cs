@@ -36,6 +36,7 @@
             this.textBoxOldPassword = new System.Windows.Forms.TextBox();
             this.labelOldPassword = new System.Windows.Forms.Label();
             this.TextBoxNewPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             Label_Password = new System.Windows.Forms.Label();
             this.panel_Reg.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +84,7 @@
             // 
             // panel_Reg
             // 
+            this.panel_Reg.Controls.Add(this.label1);
             this.panel_Reg.Controls.Add(this.textBoxOldPassword);
             this.panel_Reg.Controls.Add(this.labelOldPassword);
             this.panel_Reg.Controls.Add(Label_Password);
@@ -125,6 +127,15 @@
             this.TextBoxNewPassword.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             this.TextBoxNewPassword.Leave += new System.EventHandler(this.TextBox_Password_Leave);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
+            // 
             // FormRegister
             // 
             this.AcceptButton = this.button_Reg;
@@ -156,5 +167,6 @@
         private System.Windows.Forms.TextBox TextBoxNewPassword;
         private System.Windows.Forms.Label labelOldPassword;
         private System.Windows.Forms.TextBox textBoxOldPassword;
+        private System.Windows.Forms.Label label1;
     }
 }

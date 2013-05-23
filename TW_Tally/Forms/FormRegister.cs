@@ -24,6 +24,7 @@ namespace TW_Tally.Forms
         public FormRegister()
         {
             InitializeComponent();
+           
           
            
         }
@@ -55,6 +56,7 @@ namespace TW_Tally.Forms
 
         private void Form_Register_Load(object sender, EventArgs e)
         {
+            label1.Text = Properties.Settings.Default.PassWordMd5Twice.ToString();
         }
 
         
@@ -89,10 +91,11 @@ namespace TW_Tally.Forms
              
              string sNewPassWordmd5 = FormsAuthentication.HashPasswordForStoringInConfigFile(sNewPassWord, "MD5");
              string sNewPassWordmd5Twice = FormsAuthentication.HashPasswordForStoringInConfigFile(sNewPassWordmd5, "MD5");
-             string sUserLoginPath = @".\App_Data\userLogin.dll";
-             string sPassWordmd5Auth = File.ReadAllText(sUserLoginPath);
-           
+            // string sUserLoginPath = @".\App_Data\userLogin.dll";
+             //string sPassWordmd5Auth = File.ReadAllText(sUserLoginPath);
+             string sPassWordmd5Auth = Properties.Settings.Default.PassWordMd5Twice.ToString(); 
             
+             
            if (sPassWordmd5Auth!=sOldPasswordmd5Twice)
             {
                 auth.setLabel("原始密码错误请重新输入");
@@ -120,7 +123,10 @@ namespace TW_Tally.Forms
                     }
                     else
                     {
-                        File.WriteAllText(sUserLoginPath, sNewPassWordmd5Twice);
+                       // File.WriteAllText(sUserLoginPath, sNewPassWordmd5Twice);
+                        Properties.Settings.Default.PassWordMd5Twice = sNewPassWordmd5Twice;
+
+                        Properties.Settings.Default.Save();
                         MessageBox.Show("密码修改。返回登录界面");
                         this.DialogResult = DialogResult.OK;
 
@@ -185,5 +191,6 @@ namespace TW_Tally.Forms
         {
 
         }
+        
     }
 }

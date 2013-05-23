@@ -21,7 +21,7 @@ namespace TW_Tally.Forms
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-            string sUserLoginPath = @".\App_Data\userLogin.dll";
+           // string sUserLoginPath = @".\App_Data\userLogin.dll";
             string PassWord = textBox_Password.Text.Trim();
             PassWord += "abc";
             string sPassWordmd5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(PassWord, "MD5");
@@ -30,17 +30,12 @@ namespace TW_Tally.Forms
             //输入密码 两次MD5加密
             
           
-             FileInfo fUserLogin = new FileInfo(sUserLoginPath);
-         if (!File.Exists(sUserLoginPath))
-           {
-              File.CreateText(sUserLoginPath);
-            }
             string sPassWordmd5Auth = "";
             //sPassWordmd5Auth = File.ReadAllText(sUserLoginPath);
-            sPassWordmd5Auth=File.ReadAllText(sUserLoginPath); //读取密码的二次MD5加密值
-            int iPassWordMd5Lenth = Convert.ToInt16(fUserLogin.Length);
+            sPassWordmd5Auth = Properties.Settings.Default.PassWordMd5Twice.ToString();
+           // int iPassWordMd5Lenth = Convert.ToInt16(fUserLogin.Length);
             
-            if (iPassWordMd5Lenth!=32)
+            if (sPassWordmd5Auth.Length!=32)
             {
                 FormMessageAutoClose fPassWordNoSet = new FormMessageAutoClose();
                 fPassWordNoSet.setLabel("密码未设置");
