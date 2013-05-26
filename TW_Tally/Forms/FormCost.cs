@@ -17,21 +17,19 @@ namespace TW_Tally.Forms
             InitializeComponent();
         }
 
-        private void userExpenseBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.userExpenseBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.userDBDataSet);
-
-        }
+     
 
         private void FormCost_Load(object sender, EventArgs e)
         {
-            // TODO: 这行代码将数据加载到表“userDBDataSet1.MerchantList”中。您可以根据需要移动或删除它。
-        
-           
-          
-
+            // TODO: 这行代码将数据加载到表“userDBDataSet.MerchantList”中。您可以根据需要移动或删除它。
+            this.merchantListTableAdapter.Fill(this.userDBDataSet.MerchantList);
+            // TODO: 这行代码将数据加载到表“userDBDataSet.CostType”中。您可以根据需要移动或删除它。
+            this.costTypeTableAdapter.Fill(this.userDBDataSet.CostType);
+            // TODO: 这行代码将数据加载到表“userDBDataSet.UserExpense”中。您可以根据需要移动或删除它。
+            this.userExpenseTableAdapter.Fill(this.userDBDataSet.UserExpense);
+            // TODO: 这行代码将数据加载到表“userDBDataSet.CostClass”中。您可以根据需要移动或删除它。
+            this.costClassTableAdapter.Fill(this.userDBDataSet.CostClass);
+            
         }
 
         
@@ -76,7 +74,7 @@ namespace TW_Tally.Forms
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
+           DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
             newCostLine["Cost"]=textBoxCost.Text.Trim();
             newCostLine["Class"]=comboBoxBig.Text.Trim();
             newCostLine["Event"] = comboBoxSmall.Text.Trim();
@@ -91,8 +89,8 @@ namespace TW_Tally.Forms
                FormMessageAutoClose fm = new FormMessageAutoClose();
                fm.setLabel("添加成功返回主界面。");
                fm.ShowDialog();
-               this.DialogResult = DialogResult.OK;
-
+               //this.DialogResult = DialogResult.OK;
+               this.Close();
             }
             catch (System.Exception ex)
             {
@@ -114,7 +112,7 @@ namespace TW_Tally.Forms
         
         private void buttonSaveAgain_Click(object sender, EventArgs e)
         {
-            DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
+           DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
             newCostLine["Cost"] = textBoxCost.Text.Trim();
             newCostLine["Class"] = comboBoxBig.Text.Trim();
             newCostLine["Event"] = comboBoxSmall.Text.Trim();
@@ -123,9 +121,9 @@ namespace TW_Tally.Forms
             newCostLine["Comments"] = textBoxComments.Text.Trim();
             try
             {
-
-                userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
-                this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
+                
+               userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
+               this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
                 FormMessageAutoClose fm = new FormMessageAutoClose();
                 fm.setLabel("添加成功。");
                 fm.ShowDialog();
@@ -135,12 +133,45 @@ namespace TW_Tally.Forms
                 comboBoxShop.Text = "";
                 dateTimePickerCost.Value = DateTime.Now;
                 textBoxComments.Text = "";
+               
 
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void comboBoxSmall_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void comboBoxSmall_SelectedValueChanged(object sender, EventArgs e)
+        {   
+            try
+            {
+                if (comboBoxSmall.Text != "")
+                {
+                    string sPicSource = System.Environment.CurrentDirectory;
+                    sPicSource += @"\Pics\";
+                    sPicSource += comboBoxSmall.Text;
+                    sPicSource += @".jpg";
+                    pictureBoxType.Load(sPicSource);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                pictureBoxType.Load(@".\Pics\Null.jpg");
+            }
+            finally
+            {
+               
+            }
+
+       
+
+           
         }
     }
 }

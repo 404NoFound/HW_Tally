@@ -73,6 +73,12 @@
     <Compile Include="Forms\FormCost.Designer.cs">
       <DependentUpon>FormCost.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormIncome.Designer.cs">
+      <DependentUpon>FormIncome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     <Compile Include="Forms\FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormShow.Designer.cs">
+      <DependentUpon>FormShow.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\FormCost.resx">
       <DependentUpon>FormCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormIncome.resx">
+      <DependentUpon>FormIncome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -129,6 +144,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

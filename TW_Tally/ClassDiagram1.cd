@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TW_Tally.Class_Form" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAQAAAIAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Class_Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.MainForm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAQACAAAgCAgAACAAAAgQAAAAAAAA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Program" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.userDBDataSet" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBhAEAAyAQGALABAAAQAAAIAgiQBgQSACAQAEKBBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Class.DataOpen" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAABAABAA=</HashCode>
+      <FileName>Class\DataOpen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Forms.FormCost" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIFIYAEAwCAAAAAIgEaAKAgCAAAAAEAMEIJIEIUAAAg=</HashCode>
+      <FileName>Forms\FormCost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Forms.FormIncome" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAEACAAAAoAEAHAKAACAAAQAACAIAAAQAQAAAM=</HashCode>
+      <FileName>Forms\FormIncome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Forms.FormLogin" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAAAAAAACAAAAAAFACABAACAAAEIAAQAAAAAAIABAA=</HashCode>
+      <FileName>Forms\FormLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Forms.FormMessageAutoClose" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAgACBACAAAAAAQAAAAAACBQ=</HashCode>
+      <FileName>Forms\FormMessageAutoClose.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Forms.FormRegister" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAACGCAACDAgBAgAACBAAATEgIIAAgAkCQAQCAAAAA=</HashCode>
+      <FileName>Forms\FormRegister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Forms.FormShow" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\FormShow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Properties.Resources" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIgAAAAABAAAAAAAAAAAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.userDBDataSetTableAdapters.CostClassTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.userDBDataSetTableAdapters.CostTypeTableAdapter" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.userDBDataSetTableAdapters.MerchantListTableAdapter" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.userDBDataSetTableAdapters.UserExpenseTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.userDBDataSetTableAdapters.UserIncomeTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.userDBDataSetTableAdapters.IncomeClassTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TW_Tally.userDBDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARgAJCAIAABABAEJAAAAcBAgACACgAAAAAQCABAABEQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

@@ -35,8 +35,21 @@ namespace TW_Tally
 
         private void buttonAddRecord_Click(object sender, EventArgs e)
         {
+            splitContainerMain.Panel2.Controls.Clear();
             FormCost fc = new FormCost();
-            fc.ShowDialog();
+            fc.MdiParent = this;
+            fc.Parent = splitContainerMain.Panel2;
+            fc.Show();
+           // fc.ShowDialog();
+        }
+
+        private void buttonIncome_Click(object sender, EventArgs e)
+        {
+            splitContainerMain.Panel2.Controls.Clear();
+            FormIncome fi = new FormIncome();
+            fi.MdiParent = this;
+            fi.Parent = splitContainerMain.Panel2;
+            fi.Show();
         }
 
         
