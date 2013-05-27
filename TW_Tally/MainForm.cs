@@ -39,6 +39,9 @@ namespace TW_Tally
             FormCost fc = new FormCost();
             fc.MdiParent = this;
             fc.Parent = splitContainerMain.Panel2;
+            fc.Height = splitContainerMain.Panel2.Height;
+            fc.Width = splitContainerMain.Panel2.Width;
+           // fc.BackColor = System.Drawing.Color.Transparent;
             fc.Show();
            // fc.ShowDialog();
         }
@@ -49,7 +52,31 @@ namespace TW_Tally
             FormIncome fi = new FormIncome();
             fi.MdiParent = this;
             fi.Parent = splitContainerMain.Panel2;
+            fi.Height = splitContainerMain.Panel2.Height;
+            fi.Width = splitContainerMain.Panel2.Width;
             fi.Show();
+        }
+
+        private void buttonExpenseDetail_Click(object sender, EventArgs e)
+        {
+            splitContainerMain.Panel2.Controls.Clear();
+            FormExpenseDetail fed = new FormExpenseDetail();
+            fed.MdiParent = this;
+            fed.Parent = splitContainerMain.Panel2;
+            fed.Height = splitContainerMain.Panel2.Height;
+           fed.Width = splitContainerMain.Panel2.Width;
+            fed.Show();
+        }
+
+        private void buttonIncomeDetail_Click(object sender, EventArgs e)
+        {
+            splitContainerMain.Panel2.Controls.Clear();
+            FormIncomeDetail fid = new FormIncomeDetail();
+            fid.MdiParent = this;
+            fid.Parent = splitContainerMain.Panel2;
+            fid.Height = splitContainerMain.Panel2.Height;
+            fid.Width = splitContainerMain.Panel2.Width;
+            fid.Show();
         }
 
         

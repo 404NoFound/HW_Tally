@@ -21,7 +21,12 @@ namespace TW_Tally.Class
             {
                 DBConnection.ConnectionString= strConnection;
             }
-        }
+
+
+
+
+
+      }
 
   /*
 OleDbConnection con = new OleDbConnection(strConnection);

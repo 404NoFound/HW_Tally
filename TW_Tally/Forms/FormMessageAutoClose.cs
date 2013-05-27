@@ -17,6 +17,13 @@ namespace TW_Tally.Forms
             timer_CloseForm.Interval=500; //1.5s 
         }
 
+        public FormMessageAutoClose(string label)
+        {
+            
+           
+        }
+
+
        public void setLabel(string LabelText)
         {
             this.label_Success.Text = LabelText;

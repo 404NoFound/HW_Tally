@@ -34,9 +34,8 @@
             this.labelType = new System.Windows.Forms.Label();
             this.comboBoxBig = new System.Windows.Forms.ComboBox();
             this.userDBDataSet = new TW_Tally.userDBDataSet();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxSmall = new System.Windows.Forms.ComboBox();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.costTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.labelShop = new System.Windows.Forms.Label();
             this.comboBoxShop = new System.Windows.Forms.ComboBox();
             this.merchantListBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -55,8 +54,7 @@
             this.merchantListTableAdapter = new TW_Tally.userDBDataSetTableAdapters.MerchantListTableAdapter();
             this.pictureBoxType = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costTypeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.merchantListBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.merchantListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userExpenseBindingSource)).BeginInit();
@@ -79,8 +77,6 @@
             this.textBoxCost.Size = new System.Drawing.Size(121, 21);
             this.textBoxCost.TabIndex = 1;
             this.textBoxCost.Text = "0.00";
-            this.textBoxCost.TextChanged += new System.EventHandler(this.textBoxCost_TextChanged);
-            this.textBoxCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCost_KeyPress);
             // 
             // labelType
             // 
@@ -101,35 +97,31 @@
             this.comboBoxBig.Size = new System.Drawing.Size(121, 20);
             this.comboBoxBig.TabIndex = 3;
             this.comboBoxBig.ValueMember = "CostClass.CostClass";
+            this.comboBoxBig.TextChanged += new System.EventHandler(this.comboBoxBig_TextChanged);
             // 
             // userDBDataSet
             // 
             this.userDBDataSet.DataSetName = "userDBDataSet";
             this.userDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "CostClass";
-            this.bindingSource1.DataSource = this.userDBDataSet;
-            // 
             // comboBoxSmall
             // 
-            this.comboBoxSmall.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSource1, "CostClass", true));
-            this.comboBoxSmall.DataSource = this.bindingSource2;
+            this.comboBoxSmall.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userDBDataSet, "CostType.Class", true));
+            this.comboBoxSmall.DataSource = this.costTypeBindingSource1;
             this.comboBoxSmall.DisplayMember = "Event";
             this.comboBoxSmall.FormattingEnabled = true;
             this.comboBoxSmall.Location = new System.Drawing.Point(119, 160);
             this.comboBoxSmall.Name = "comboBoxSmall";
             this.comboBoxSmall.Size = new System.Drawing.Size(121, 20);
             this.comboBoxSmall.TabIndex = 4;
-            this.comboBoxSmall.ValueMember = "Class";
+            this.comboBoxSmall.ValueMember = "Event";
             this.comboBoxSmall.SelectedValueChanged += new System.EventHandler(this.comboBoxSmall_SelectedValueChanged);
             this.comboBoxSmall.TextChanged += new System.EventHandler(this.comboBoxSmall_TextChanged);
             // 
-            // bindingSource2
+            // costTypeBindingSource1
             // 
-            this.bindingSource2.DataMember = "CostType";
-            this.bindingSource2.DataSource = this.userDBDataSet;
+            this.costTypeBindingSource1.DataMember = "CostType";
+            this.costTypeBindingSource1.DataSource = this.userDBDataSet;
             // 
             // labelShop
             // 
@@ -173,7 +165,7 @@
             // 
             // dateTimePickerCost
             // 
-            this.dateTimePickerCost.CustomFormat = "yyyy/MM/dd HH:mm";
+            this.dateTimePickerCost.CustomFormat = "yyyy/MM/dd HH:MM";
             this.dateTimePickerCost.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerCost.Location = new System.Drawing.Point(119, 257);
             this.dateTimePickerCost.Name = "dateTimePickerCost";
@@ -240,7 +232,6 @@
             this.tableAdapterManager.UpdateOrder = TW_Tally.userDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UserExpenseTableAdapter = this.userExpenseTableAdapter;
             this.tableAdapterManager.UserIncomeTableAdapter = null;
-            
             // 
             // costTypeTableAdapter
             // 
@@ -263,7 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 460);
+            this.ClientSize = new System.Drawing.Size(393, 500);
             this.Controls.Add(this.pictureBoxType);
             this.Controls.Add(this.buttonSaveAgain);
             this.Controls.Add(this.buttonOK);
@@ -286,8 +277,7 @@
             this.Activated += new System.EventHandler(this.FormCost_Activated);
             this.Load += new System.EventHandler(this.FormCost_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costTypeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.merchantListBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.merchantListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userExpenseBindingSource)).EndInit();
@@ -323,16 +313,15 @@
       
         private System.Windows.Forms.BindingSource merchantListBindingSource1;
         private userDBDataSet userDBDataSet;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private userDBDataSetTableAdapters.CostClassTableAdapter costClassTableAdapter;
         private System.Windows.Forms.BindingSource userExpenseBindingSource;
         private userDBDataSetTableAdapters.UserExpenseTableAdapter userExpenseTableAdapter;
         private userDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingSource bindingSource2;
         private userDBDataSetTableAdapters.CostTypeTableAdapter costTypeTableAdapter;
         private System.Windows.Forms.BindingSource merchantListBindingSource2;
         private userDBDataSetTableAdapters.MerchantListTableAdapter merchantListTableAdapter;
         private System.Windows.Forms.PictureBox pictureBoxType;
+        private System.Windows.Forms.BindingSource costTypeBindingSource1;
        
        
        

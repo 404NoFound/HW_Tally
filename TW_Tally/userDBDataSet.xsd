@@ -104,7 +104,16 @@
               <Mapping SourceColumn="Class" DataSetColumn="Class" />
               <Mapping SourceColumn="Event" DataSetColumn="Event" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="userDBConnectionString (Settings)" DbObjectName="CostType" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Class, Event FROM CostType</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MerchantListTableAdapter" GeneratorDataComponentClassName="MerchantListTableAdapter" Name="MerchantList" UserDataComponentName="MerchantListTableAdapter">
             <MainSource>
@@ -370,7 +379,7 @@ FROM      IncomeClass</CommandText>
   <xs:element name="userDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="userDBDataSet" msprop:Generator_UserDSName="userDBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CostClass" msprop:Generator_TableClassName="CostClassDataTable" msprop:Generator_TableVarName="tableCostClass" msprop:Generator_TablePropName="CostClass" msprop:Generator_RowDeletingName="CostClassRowDeleting" msprop:Generator_RowChangingName="CostClassRowChanging" msprop:Generator_RowEvHandlerName="CostClassRowChangeEventHandler" msprop:Generator_RowDeletedName="CostClassRowDeleted" msprop:Generator_UserTableName="CostClass" msprop:Generator_RowChangedName="CostClassRowChanged" msprop:Generator_RowEvArgName="CostClassRowChangeEvent" msprop:Generator_RowClassName="CostClassRow">
+        <xs:element name="CostClass" msprop:Generator_TableClassName="CostClassDataTable" msprop:Generator_TableVarName="tableCostClass" msprop:Generator_RowChangedName="CostClassRowChanged" msprop:Generator_TablePropName="CostClass" msprop:Generator_RowDeletingName="CostClassRowDeleting" msprop:Generator_RowChangingName="CostClassRowChanging" msprop:Generator_RowEvHandlerName="CostClassRowChangeEventHandler" msprop:Generator_RowDeletedName="CostClassRowDeleted" msprop:Generator_RowClassName="CostClassRow" msprop:Generator_UserTableName="CostClass" msprop:Generator_RowEvArgName="CostClassRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
@@ -384,7 +393,7 @@ FROM      IncomeClass</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CostType" msprop:Generator_TableClassName="CostTypeDataTable" msprop:Generator_TableVarName="tableCostType" msprop:Generator_TablePropName="CostType" msprop:Generator_RowDeletingName="CostTypeRowDeleting" msprop:Generator_RowChangingName="CostTypeRowChanging" msprop:Generator_RowEvHandlerName="CostTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="CostTypeRowDeleted" msprop:Generator_UserTableName="CostType" msprop:Generator_RowChangedName="CostTypeRowChanged" msprop:Generator_RowEvArgName="CostTypeRowChangeEvent" msprop:Generator_RowClassName="CostTypeRow">
+        <xs:element name="CostType" msprop:Generator_TableClassName="CostTypeDataTable" msprop:Generator_TableVarName="tableCostType" msprop:Generator_RowChangedName="CostTypeRowChanged" msprop:Generator_TablePropName="CostType" msprop:Generator_RowDeletingName="CostTypeRowDeleting" msprop:Generator_RowChangingName="CostTypeRowChanging" msprop:Generator_RowEvHandlerName="CostTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="CostTypeRowDeleted" msprop:Generator_RowClassName="CostTypeRow" msprop:Generator_UserTableName="CostType" msprop:Generator_RowEvArgName="CostTypeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
@@ -405,7 +414,7 @@ FROM      IncomeClass</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MerchantList" msprop:Generator_TableClassName="MerchantListDataTable" msprop:Generator_TableVarName="tableMerchantList" msprop:Generator_TablePropName="MerchantList" msprop:Generator_RowDeletingName="MerchantListRowDeleting" msprop:Generator_RowChangingName="MerchantListRowChanging" msprop:Generator_RowEvHandlerName="MerchantListRowChangeEventHandler" msprop:Generator_RowDeletedName="MerchantListRowDeleted" msprop:Generator_UserTableName="MerchantList" msprop:Generator_RowChangedName="MerchantListRowChanged" msprop:Generator_RowEvArgName="MerchantListRowChangeEvent" msprop:Generator_RowClassName="MerchantListRow">
+        <xs:element name="MerchantList" msprop:Generator_TableClassName="MerchantListDataTable" msprop:Generator_TableVarName="tableMerchantList" msprop:Generator_RowChangedName="MerchantListRowChanged" msprop:Generator_TablePropName="MerchantList" msprop:Generator_RowDeletingName="MerchantListRowDeleting" msprop:Generator_RowChangingName="MerchantListRowChanging" msprop:Generator_RowEvHandlerName="MerchantListRowChangeEventHandler" msprop:Generator_RowDeletedName="MerchantListRowDeleted" msprop:Generator_RowClassName="MerchantListRow" msprop:Generator_UserTableName="MerchantList" msprop:Generator_RowEvArgName="MerchantListRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -420,7 +429,7 @@ FROM      IncomeClass</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="UserExpense" msprop:Generator_TableClassName="UserExpenseDataTable" msprop:Generator_TableVarName="tableUserExpense" msprop:Generator_TablePropName="UserExpense" msprop:Generator_RowDeletingName="UserExpenseRowDeleting" msprop:Generator_RowChangingName="UserExpenseRowChanging" msprop:Generator_RowEvHandlerName="UserExpenseRowChangeEventHandler" msprop:Generator_RowDeletedName="UserExpenseRowDeleted" msprop:Generator_UserTableName="UserExpense" msprop:Generator_RowChangedName="UserExpenseRowChanged" msprop:Generator_RowEvArgName="UserExpenseRowChangeEvent" msprop:Generator_RowClassName="UserExpenseRow">
+        <xs:element name="UserExpense" msprop:Generator_TableClassName="UserExpenseDataTable" msprop:Generator_TableVarName="tableUserExpense" msprop:Generator_RowChangedName="UserExpenseRowChanged" msprop:Generator_TablePropName="UserExpense" msprop:Generator_RowDeletingName="UserExpenseRowDeleting" msprop:Generator_RowChangingName="UserExpenseRowChanging" msprop:Generator_RowEvHandlerName="UserExpenseRowChangeEventHandler" msprop:Generator_RowDeletedName="UserExpenseRowDeleted" msprop:Generator_RowClassName="UserExpenseRow" msprop:Generator_UserTableName="UserExpense" msprop:Generator_RowEvArgName="UserExpenseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -457,7 +466,7 @@ FROM      IncomeClass</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="UserIncome" msprop:Generator_TableClassName="UserIncomeDataTable" msprop:Generator_TableVarName="tableUserIncome" msprop:Generator_TablePropName="UserIncome" msprop:Generator_RowDeletingName="UserIncomeRowDeleting" msprop:Generator_RowChangingName="UserIncomeRowChanging" msprop:Generator_RowEvHandlerName="UserIncomeRowChangeEventHandler" msprop:Generator_RowDeletedName="UserIncomeRowDeleted" msprop:Generator_UserTableName="UserIncome" msprop:Generator_RowChangedName="UserIncomeRowChanged" msprop:Generator_RowEvArgName="UserIncomeRowChangeEvent" msprop:Generator_RowClassName="UserIncomeRow">
+        <xs:element name="UserIncome" msprop:Generator_TableClassName="UserIncomeDataTable" msprop:Generator_TableVarName="tableUserIncome" msprop:Generator_RowChangedName="UserIncomeRowChanged" msprop:Generator_TablePropName="UserIncome" msprop:Generator_RowDeletingName="UserIncomeRowDeleting" msprop:Generator_RowChangingName="UserIncomeRowChanging" msprop:Generator_RowEvHandlerName="UserIncomeRowChangeEventHandler" msprop:Generator_RowDeletedName="UserIncomeRowDeleted" msprop:Generator_RowClassName="UserIncomeRow" msprop:Generator_UserTableName="UserIncome" msprop:Generator_RowEvArgName="UserIncomeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -487,7 +496,7 @@ FROM      IncomeClass</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="IncomeClass" msprop:Generator_TableClassName="IncomeClassDataTable" msprop:Generator_TableVarName="tableIncomeClass" msprop:Generator_TablePropName="IncomeClass" msprop:Generator_RowDeletingName="IncomeClassRowDeleting" msprop:Generator_RowChangingName="IncomeClassRowChanging" msprop:Generator_RowEvHandlerName="IncomeClassRowChangeEventHandler" msprop:Generator_RowDeletedName="IncomeClassRowDeleted" msprop:Generator_UserTableName="IncomeClass" msprop:Generator_RowChangedName="IncomeClassRowChanged" msprop:Generator_RowEvArgName="IncomeClassRowChangeEvent" msprop:Generator_RowClassName="IncomeClassRow">
+        <xs:element name="IncomeClass" msprop:Generator_TableClassName="IncomeClassDataTable" msprop:Generator_TableVarName="tableIncomeClass" msprop:Generator_RowChangedName="IncomeClassRowChanged" msprop:Generator_TablePropName="IncomeClass" msprop:Generator_RowDeletingName="IncomeClassRowDeleting" msprop:Generator_RowChangingName="IncomeClassRowChanging" msprop:Generator_RowEvHandlerName="IncomeClassRowChangeEventHandler" msprop:Generator_RowDeletedName="IncomeClassRowDeleted" msprop:Generator_RowClassName="IncomeClassRow" msprop:Generator_UserTableName="IncomeClass" msprop:Generator_RowEvArgName="IncomeClassRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -530,7 +539,7 @@ FROM      IncomeClass</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="UserExpenseMerchantList" msdata:parent="UserExpense" msdata:child="MerchantList" msdata:parentkey="Merchant" msdata:childkey="MerchantName" msprop:Generator_UserChildTable="MerchantList" msprop:Generator_ChildPropName="GetMerchantListRows" msprop:Generator_UserRelationName="UserExpenseMerchantList" msprop:Generator_RelationVarName="relationUserExpenseMerchantList" msprop:Generator_UserParentTable="UserExpense" msprop:Generator_ParentPropName="UserExpenseRow" />
+      <msdata:Relationship name="UserExpenseMerchantList" msdata:parent="UserExpense" msdata:child="MerchantList" msdata:parentkey="Merchant" msdata:childkey="MerchantName" msprop:Generator_UserChildTable="MerchantList" msprop:Generator_ChildPropName="GetMerchantListRows" msprop:Generator_UserRelationName="UserExpenseMerchantList" msprop:Generator_ParentPropName="UserExpenseRow" msprop:Generator_RelationVarName="relationUserExpenseMerchantList" msprop:Generator_UserParentTable="UserExpense" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

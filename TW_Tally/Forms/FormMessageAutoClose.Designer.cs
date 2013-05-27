@@ -35,13 +35,14 @@
             // 
             // label_Success
             // 
-            this.label_Success.AutoSize = true;
+            this.label_Success.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_Success.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label_Success.Location = new System.Drawing.Point(12, 59);
+            this.label_Success.Location = new System.Drawing.Point(0, 0);
             this.label_Success.Name = "label_Success";
-            this.label_Success.Size = new System.Drawing.Size(65, 20);
+            this.label_Success.Size = new System.Drawing.Size(234, 84);
             this.label_Success.TabIndex = 0;
             this.label_Success.Text = "默认字符";
+            this.label_Success.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_Success.Click += new System.EventHandler(this.label_Success_Click);
             // 
             // timer_CloseForm
@@ -53,7 +54,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(191, 133);
+            this.ClientSize = new System.Drawing.Size(234, 84);
             this.ControlBox = false;
             this.Controls.Add(this.label_Success);
             this.MaximizeBox = false;
@@ -65,7 +66,6 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FormMessageAutoClose_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

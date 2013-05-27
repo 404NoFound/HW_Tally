@@ -47,7 +47,7 @@
             // 
             // button_Login
             // 
-            this.button_Login.Location = new System.Drawing.Point(476, 443);
+            this.button_Login.Location = new System.Drawing.Point(480, 494);
             this.button_Login.Name = "button_Login";
             this.button_Login.Size = new System.Drawing.Size(92, 40);
             this.button_Login.TabIndex = 2;
@@ -58,7 +58,7 @@
             // 
             // button_Register
             // 
-            this.button_Register.Location = new System.Drawing.Point(674, 443);
+            this.button_Register.Location = new System.Drawing.Point(676, 494);
             this.button_Register.Name = "button_Register";
             this.button_Register.Size = new System.Drawing.Size(75, 40);
             this.button_Register.TabIndex = 3;
@@ -77,14 +77,16 @@
             // FormLogin
             // 
             this.AcceptButton = this.button_Login;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::TW_Tally.Properties.Resources.MainBackground;
-            this.ClientSize = new System.Drawing.Size(1008, 611);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(784, 611);
             this.Controls.Add(this.labelNormalPassword);
             this.Controls.Add(this.button_Register);
             this.Controls.Add(this.button_Login);
             this.Controls.Add(this.textBox_Password);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录";

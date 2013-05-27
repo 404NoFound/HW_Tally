@@ -56,7 +56,6 @@ namespace TW_Tally.Forms
 
         private void Form_Register_Load(object sender, EventArgs e)
         {
-            label1.Text = Properties.Settings.Default.PassWordMd5Twice.ToString();
         }
 
         
@@ -109,15 +108,15 @@ namespace TW_Tally.Forms
                 {
                     MessageBox.Show("请重新输入密码 注意只能包含英文大小写和数字");
                     this.TextBoxNewPassword.Text = "";
-                    this.textBox_PasswordCheck.Text = "";
+                    this.textBoxPasswordCheck.Text = "";
                     this.TextBoxNewPassword.Focus();
                 }
                 else
                 {
-                    if (!textBox_PasswordCheck.Text.Equals(TextBoxNewPassword.Text))
+                    if (!textBoxPasswordCheck.Text.Equals(TextBoxNewPassword.Text))
                     {
                         MessageBox.Show("密码不一致 请重新输入, GV好赞");
-                        this.textBox_PasswordCheck.Text = "";
+                        this.textBoxPasswordCheck.Text = "";
                         this.TextBoxNewPassword.Text = "";
                         this.TextBoxNewPassword.Focus();
                     }
@@ -187,10 +186,20 @@ namespace TW_Tally.Forms
             textBoxOldPassword.Focus();
         }
 
-        private void textBoxOldPassword_TextChanged(object sender, EventArgs e)
+        private void buttonShowPassword_MouseEnter(object sender, EventArgs e)
         {
-
+            TextBoxNewPassword.UseSystemPasswordChar = false;
+            textBoxPasswordCheck.UseSystemPasswordChar = false;
         }
+
+        private void buttonShowPassword_MouseLeave(object sender, EventArgs e)
+        {
+            TextBoxNewPassword.UseSystemPasswordChar = true;
+            textBoxPasswordCheck.UseSystemPasswordChar = true;
+        }
+
+
+     
         
     }
 }

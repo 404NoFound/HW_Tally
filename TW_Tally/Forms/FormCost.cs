@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using TW_Tally.Class;
+using System.Data.OleDb;
 
 namespace TW_Tally.Forms
 {
@@ -29,7 +30,21 @@ namespace TW_Tally.Forms
             this.userExpenseTableAdapter.Fill(this.userDBDataSet.UserExpense);
             // TODO: 这行代码将数据加载到表“userDBDataSet.CostClass”中。您可以根据需要移动或删除它。
             this.costClassTableAdapter.Fill(this.userDBDataSet.CostClass);
-            
+            for (int i = 1; i <= 24; i++)
+            {
+              //  comboBoxHours.Items.Add(i);
+            }
+
+            for (int i = 1; i <= 60; i++)
+            {
+            //    comboBoxMinutes.Items.Add(i);
+            }
+            DateTime DT = new DateTime();
+            DT = DateTime.Now;
+          //  comboBoxMinutes.Text = DT.Minute.ToString();
+           // comboBoxHours.Text=DT.Hour.ToString();
+
+
         }
 
         
@@ -62,19 +77,18 @@ namespace TW_Tally.Forms
             }
         }
 
-        private void textBoxCost_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void buttonOK_Click(object sender, EventArgs e)
-        {
+        {   
+
            DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
+            DateTime dt=new DateTime();
+          //  dt = dateTimePickerCost.Value;
+            //dt.Hour = comboBoxHours.SelectedItem;
+           // dt.Minute = comboBoxMinutes.SelectedItem;
+            
+
             newCostLine["Cost"]=textBoxCost.Text.Trim();
             newCostLine["Class"]=comboBoxBig.Text.Trim();
             newCostLine["Event"] = comboBoxSmall.Text.Trim();
@@ -101,8 +115,7 @@ namespace TW_Tally.Forms
 
         private void FormCost_Activated(object sender, EventArgs e)
         {
-            
-        }
+                    }
 
         private void comboBoxShop_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -171,6 +184,44 @@ namespace TW_Tally.Forms
 
        
 
+           
+        }
+
+   
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.costTypeTableAdapter.FillBy(this.userDBDataSet.CostType);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void comboBoxBig_TextChanged(object sender, EventArgs e)
+        {/*
+            string strConnection = @" Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\userDB.mdb";
+            string strCommand = string.Format("SELECT Event  FROM  CostType WHERE   (Class) ='{0}'",comboBoxBig.Text );
+            OleDbCommand DBcomm = new OleDbCommand();
+            OleDbConnection DBConnection = new OleDbConnection();
+            DBConnection.ConnectionString = strConnection;
+            DBConnection.Open();
+            DBcomm.CommandText = strCommand;
+            OleDbDataAdapter DA = new OleDbDataAdapter(strCommand,DBConnection);
+           
+            DataSet ds=new DataSet();
+            DA.Fill(ds);
+            DataTable dt=ds.Tables[0];
+            for (int i=0;i<dt.Rows.Count;i++)
+            {
+                comboBoxSmall.Items.Add(dt.Rows[i]["Event"]);
+            }
+            DBConnection.Close();
+
+         */
            
         }
     }

@@ -47,9 +47,9 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.userIncomeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.userDBDataSet1 = new TW_Tally.userDBDataSet();
             this.incomeClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.userDBDataSet1 = new TW_Tally.userDBDataSet();
+            this.userIncomeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.incomeClassTableAdapter1 = new TW_Tally.userDBDataSetTableAdapters.IncomeClassTableAdapter();
             moneyLabel = new System.Windows.Forms.Label();
             datetimeLabel = new System.Windows.Forms.Label();
@@ -58,9 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIncomeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomeClassBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userIncomeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomeClassBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIncomeBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // moneyLabel
@@ -165,15 +165,15 @@
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.ValueMember = "ID";
             // 
-            // userDBDataSet1
-            // 
-            this.userDBDataSet1.DataSetName = "userDBDataSet";
-            this.userDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // incomeClassBindingSource1
             // 
             this.incomeClassBindingSource1.DataMember = "IncomeClass";
             this.incomeClassBindingSource1.DataSource = this.userDBDataSet1;
+            // 
+            // userDBDataSet1
+            // 
+            this.userDBDataSet1.DataSetName = "userDBDataSet";
+            this.userDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // incomeClassTableAdapter1
             // 
@@ -201,9 +201,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIncomeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomeClassBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userIncomeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomeClassBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIncomeBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
