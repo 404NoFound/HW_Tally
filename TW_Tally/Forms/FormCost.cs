@@ -115,6 +115,7 @@ namespace TW_Tally.Forms
 
         private void FormCost_Activated(object sender, EventArgs e)
         {
+            textBoxCost.Focus();
                     }
 
         private void comboBoxShop_SelectedIndexChanged(object sender, EventArgs e)

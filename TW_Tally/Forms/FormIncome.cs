@@ -110,5 +110,42 @@ namespace TW_Tally.Forms
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            DataRow newIncomeLine = userDBDataSet.Tables["UserIncome"].NewRow();
+            newIncomeLine["Money"] = moneyTextBox.Text.Trim();
+            newIncomeLine["Datetime"] = datetimeDateTimePicker.Value;
+            newIncomeLine["Source"] = comboBoxSource.Text;
+            newIncomeLine["Comments"] = commentsTextBox.Text.Trim();
+            newIncomeLine["Type"] = comboBoxType.Text.Trim();
+
+            try
+            {
+
+                userDBDataSet.Tables["UserIncome"].Rows.Add(newIncomeLine);
+                this.userIncomeTableAdapter.Update(this.userDBDataSet.UserIncome);
+                FormMessageAutoClose fm = new FormMessageAutoClose();
+                fm.setLabel("添加成功返回主界面。");
+                fm.ShowDialog();
+                //this.DialogResult = DialogResult.OK;
+                this.Close();
+
+                moneyTextBox.Text = "0.00";
+                datetimeDateTimePicker.Value = DateTime.Now;
+                commentsTextBox.Text = "";
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void FormIncome_Activated(object sender, EventArgs e)
+        {
+            moneyTextBox.Focus();
+        }
     }
 }

@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="PassWordMd5Twice" Type="System.String" Scope="User">
-      <Value Profile="(Default)">4B1F8F775E93C0BF399CECC0103EBEF3</Value>
+      <Value Profile="(Default)">EECEBAA0B2E541717B55FEFDE4004D7D</Value>
     </Setting>
     <Setting Name="userDBConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;

@@ -125,11 +125,14 @@
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="moneyLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>方正少儿_GBK, 15.75pt</value>
+  </data>
   <data name="moneyLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 36</value>
+    <value>95, 60</value>
   </data>
   <data name="moneyLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 12</value>
+    <value>58, 24</value>
   </data>
   <data name="moneyLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -155,11 +158,14 @@
   <data name="datetimeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="datetimeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>方正少儿_GBK, 15.75pt</value>
+  </data>
   <data name="datetimeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 119</value>
+    <value>95, 140</value>
   </data>
   <data name="datetimeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 12</value>
+    <value>58, 24</value>
   </data>
   <data name="datetimeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -185,11 +191,14 @@
   <data name="commentsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="commentsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>方正少儿_GBK, 15.75pt</value>
+  </data>
   <data name="commentsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 289</value>
+    <value>95, 380</value>
   </data>
   <data name="commentsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 12</value>
+    <value>58, 24</value>
   </data>
   <data name="commentsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -215,11 +224,14 @@
   <data name="typeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="typeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>方正少儿_GBK, 15.75pt</value>
+  </data>
   <data name="typeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 171</value>
+    <value>95, 220</value>
   </data>
   <data name="typeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 12</value>
+    <value>58, 24</value>
   </data>
   <data name="typeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -252,7 +264,7 @@
     <value>17, 55</value>
   </metadata>
   <data name="moneyTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 36</value>
+    <value>278, 60</value>
   </data>
   <data name="moneyTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 21</value>
@@ -279,7 +291,7 @@
     <value>yyyy/MM/dd HH:mm</value>
   </data>
   <data name="datetimeDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 110</value>
+    <value>278, 140</value>
   </data>
   <data name="datetimeDateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 21</value>
@@ -300,13 +312,13 @@
     <value>9</value>
   </data>
   <data name="commentsTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 289</value>
+    <value>278, 364</value>
   </data>
   <data name="commentsTextBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="commentsTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 100</value>
+    <value>158, 77</value>
   </data>
   <data name="commentsTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -326,11 +338,14 @@
   <data name="labelSource.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelSource.Font" type="System.Drawing.Font, System.Drawing">
+    <value>方正少儿_GBK, 15.75pt</value>
+  </data>
   <data name="labelSource.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 234</value>
+    <value>95, 300</value>
   </data>
   <data name="labelSource.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 12</value>
+    <value>80, 24</value>
   </data>
   <data name="labelSource.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -351,7 +366,7 @@
     <value>5</value>
   </data>
   <data name="comboBoxSource.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 234</value>
+    <value>278, 306</value>
   </data>
   <data name="comboBoxSource.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 20</value>
@@ -374,8 +389,12 @@
   <metadata name="incomeClassBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonSave.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
   <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 425</value>
+    <value>95, 460</value>
   </data>
   <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -398,38 +417,38 @@
   <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 425</value>
+  <data name="buttonAgain.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonAgain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 460</value>
+  </data>
+  <data name="buttonAgain.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonAgain.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="buttonAgain.Text" xml:space="preserve">
     <value>保存再记</value>
   </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
+  <data name="&gt;&gt;buttonAgain.Name" xml:space="preserve">
+    <value>buttonAgain</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonAgain.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonAgain.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonAgain.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <metadata name="incomeClassBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>378, 93</value>
   </metadata>
-  <metadata name="userDBDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>231, 93</value>
-  </metadata>
   <data name="comboBoxType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 168</value>
+    <value>278, 220</value>
   </data>
   <data name="comboBoxType.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 20</value>
@@ -449,6 +468,15 @@
   <data name="&gt;&gt;comboBoxType.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="incomeClassBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>378, 93</value>
+  </metadata>
+  <metadata name="userDBDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>231, 93</value>
+  </metadata>
+  <metadata name="userDBDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>231, 93</value>
+  </metadata>
   <metadata name="userIncomeBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 93</value>
   </metadata>
@@ -462,7 +490,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>385, 500</value>
+    <value>575, 600</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>FormIncome</value>

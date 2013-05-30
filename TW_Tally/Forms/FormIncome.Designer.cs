@@ -45,7 +45,7 @@
             this.comboBoxSource = new System.Windows.Forms.ComboBox();
             this.incomeClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSave = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAgain = new System.Windows.Forms.Button();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.incomeClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userDBDataSet1 = new TW_Tally.userDBDataSet();
@@ -66,21 +66,29 @@
             // moneyLabel
             // 
             resources.ApplyResources(moneyLabel, "moneyLabel");
+            moneyLabel.BackColor = System.Drawing.Color.Transparent;
+            moneyLabel.ForeColor = System.Drawing.Color.White;
             moneyLabel.Name = "moneyLabel";
             // 
             // datetimeLabel
             // 
             resources.ApplyResources(datetimeLabel, "datetimeLabel");
+            datetimeLabel.BackColor = System.Drawing.Color.Transparent;
+            datetimeLabel.ForeColor = System.Drawing.Color.Transparent;
             datetimeLabel.Name = "datetimeLabel";
             // 
             // commentsLabel
             // 
             resources.ApplyResources(commentsLabel, "commentsLabel");
+            commentsLabel.BackColor = System.Drawing.Color.Transparent;
+            commentsLabel.ForeColor = System.Drawing.Color.White;
             commentsLabel.Name = "commentsLabel";
             // 
             // typeLabel
             // 
             resources.ApplyResources(typeLabel, "typeLabel");
+            typeLabel.BackColor = System.Drawing.Color.Transparent;
+            typeLabel.ForeColor = System.Drawing.Color.White;
             typeLabel.Name = "typeLabel";
             // 
             // userDBDataSet
@@ -130,6 +138,8 @@
             // labelSource
             // 
             resources.ApplyResources(this.labelSource, "labelSource");
+            this.labelSource.BackColor = System.Drawing.Color.Black;
+            this.labelSource.ForeColor = System.Drawing.Color.White;
             this.labelSource.Name = "labelSource";
             // 
             // comboBoxSource
@@ -146,15 +156,18 @@
             // buttonSave
             // 
             resources.ApplyResources(this.buttonSave, "buttonSave");
+            this.buttonSave.Image = global::TW_Tally.Properties.Resources.QQ截图20130530082853;
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // button2
+            // buttonAgain
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.buttonAgain, "buttonAgain");
+            this.buttonAgain.Image = global::TW_Tally.Properties.Resources.QQ截图20130530082853;
+            this.buttonAgain.Name = "buttonAgain";
+            this.buttonAgain.UseVisualStyleBackColor = true;
+            this.buttonAgain.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBoxType
             // 
@@ -183,9 +196,10 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::TW_Tally.Properties.Resources.Right;
             this.Controls.Add(this.comboBoxType);
             this.Controls.Add(typeLabel);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonAgain);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.comboBoxSource);
             this.Controls.Add(this.labelSource);
@@ -197,6 +211,7 @@
             this.Controls.Add(this.moneyTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormIncome";
+            this.Activated += new System.EventHandler(this.FormIncome_Activated);
             this.Load += new System.EventHandler(this.FormIncome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIncomeBindingSource)).EndInit();
@@ -223,7 +238,7 @@
         private System.Windows.Forms.ComboBox comboBoxSource;
         private System.Windows.Forms.BindingSource incomeClassBindingSource;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAgain;
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.BindingSource userIncomeBindingSource1;
         private userDBDataSet userDBDataSet1;

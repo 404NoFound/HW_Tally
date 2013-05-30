@@ -64,26 +64,32 @@
             // labelCost
             // 
             this.labelCost.AutoSize = true;
-            this.labelCost.Location = new System.Drawing.Point(32, 36);
+            this.labelCost.BackColor = System.Drawing.Color.Transparent;
+            this.labelCost.Font = new System.Drawing.Font("方正少儿_GBK", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelCost.ForeColor = System.Drawing.Color.White;
+            this.labelCost.Location = new System.Drawing.Point(95, 60);
             this.labelCost.Name = "labelCost";
-            this.labelCost.Size = new System.Drawing.Size(35, 12);
+            this.labelCost.Size = new System.Drawing.Size(58, 24);
             this.labelCost.TabIndex = 0;
             this.labelCost.Text = "金额:";
             // 
             // textBoxCost
             // 
-            this.textBoxCost.Location = new System.Drawing.Point(119, 36);
+            this.textBoxCost.Location = new System.Drawing.Point(278, 60);
             this.textBoxCost.Name = "textBoxCost";
             this.textBoxCost.Size = new System.Drawing.Size(121, 21);
-            this.textBoxCost.TabIndex = 1;
+            this.textBoxCost.TabIndex = 0;
             this.textBoxCost.Text = "0.00";
             // 
             // labelType
             // 
             this.labelType.AutoSize = true;
-            this.labelType.Location = new System.Drawing.Point(32, 104);
+            this.labelType.BackColor = System.Drawing.Color.Transparent;
+            this.labelType.Font = new System.Drawing.Font("方正少儿_GBK", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelType.ForeColor = System.Drawing.Color.White;
+            this.labelType.Location = new System.Drawing.Point(95, 140);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(41, 12);
+            this.labelType.Size = new System.Drawing.Size(76, 24);
             this.labelType.TabIndex = 2;
             this.labelType.Text = "种类：";
             // 
@@ -92,10 +98,10 @@
             this.comboBoxBig.DataSource = this.userDBDataSet;
             this.comboBoxBig.DisplayMember = "CostClass.CostClass";
             this.comboBoxBig.FormattingEnabled = true;
-            this.comboBoxBig.Location = new System.Drawing.Point(119, 104);
+            this.comboBoxBig.Location = new System.Drawing.Point(278, 137);
             this.comboBoxBig.Name = "comboBoxBig";
             this.comboBoxBig.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxBig.TabIndex = 3;
+            this.comboBoxBig.TabIndex = 1;
             this.comboBoxBig.ValueMember = "CostClass.CostClass";
             this.comboBoxBig.TextChanged += new System.EventHandler(this.comboBoxBig_TextChanged);
             // 
@@ -110,10 +116,10 @@
             this.comboBoxSmall.DataSource = this.costTypeBindingSource1;
             this.comboBoxSmall.DisplayMember = "Event";
             this.comboBoxSmall.FormattingEnabled = true;
-            this.comboBoxSmall.Location = new System.Drawing.Point(119, 160);
+            this.comboBoxSmall.Location = new System.Drawing.Point(278, 184);
             this.comboBoxSmall.Name = "comboBoxSmall";
             this.comboBoxSmall.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxSmall.TabIndex = 4;
+            this.comboBoxSmall.TabIndex = 2;
             this.comboBoxSmall.ValueMember = "Event";
             this.comboBoxSmall.SelectedValueChanged += new System.EventHandler(this.comboBoxSmall_SelectedValueChanged);
             this.comboBoxSmall.TextChanged += new System.EventHandler(this.comboBoxSmall_TextChanged);
@@ -126,9 +132,12 @@
             // labelShop
             // 
             this.labelShop.AutoSize = true;
-            this.labelShop.Location = new System.Drawing.Point(32, 203);
+            this.labelShop.BackColor = System.Drawing.Color.Transparent;
+            this.labelShop.Font = new System.Drawing.Font("方正少儿_GBK", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelShop.ForeColor = System.Drawing.Color.White;
+            this.labelShop.Location = new System.Drawing.Point(95, 220);
             this.labelShop.Name = "labelShop";
-            this.labelShop.Size = new System.Drawing.Size(41, 12);
+            this.labelShop.Size = new System.Drawing.Size(76, 24);
             this.labelShop.TabIndex = 5;
             this.labelShop.Text = "商家：";
             // 
@@ -138,10 +147,10 @@
             this.comboBoxShop.DataSource = this.merchantListBindingSource2;
             this.comboBoxShop.DisplayMember = "MerchantName";
             this.comboBoxShop.FormattingEnabled = true;
-            this.comboBoxShop.Location = new System.Drawing.Point(119, 203);
+            this.comboBoxShop.Location = new System.Drawing.Point(277, 220);
             this.comboBoxShop.Name = "comboBoxShop";
-            this.comboBoxShop.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxShop.TabIndex = 6;
+            this.comboBoxShop.Size = new System.Drawing.Size(168, 20);
+            this.comboBoxShop.TabIndex = 3;
             this.comboBoxShop.ValueMember = "MerchantName";
             this.comboBoxShop.SelectedIndexChanged += new System.EventHandler(this.comboBoxShop_SelectedIndexChanged);
             // 
@@ -157,9 +166,12 @@
             // labelDataTime
             // 
             this.labelDataTime.AutoSize = true;
-            this.labelDataTime.Location = new System.Drawing.Point(32, 257);
+            this.labelDataTime.BackColor = System.Drawing.Color.Transparent;
+            this.labelDataTime.Font = new System.Drawing.Font("方正少儿_GBK", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelDataTime.ForeColor = System.Drawing.Color.Transparent;
+            this.labelDataTime.Location = new System.Drawing.Point(95, 300);
             this.labelDataTime.Name = "labelDataTime";
-            this.labelDataTime.Size = new System.Drawing.Size(41, 12);
+            this.labelDataTime.Size = new System.Drawing.Size(76, 24);
             this.labelDataTime.TabIndex = 7;
             this.labelDataTime.Text = "时间：";
             // 
@@ -167,44 +179,51 @@
             // 
             this.dateTimePickerCost.CustomFormat = "yyyy/MM/dd HH:MM";
             this.dateTimePickerCost.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerCost.Location = new System.Drawing.Point(119, 257);
+            this.dateTimePickerCost.Location = new System.Drawing.Point(278, 303);
             this.dateTimePickerCost.Name = "dateTimePickerCost";
             this.dateTimePickerCost.Size = new System.Drawing.Size(168, 21);
-            this.dateTimePickerCost.TabIndex = 8;
+            this.dateTimePickerCost.TabIndex = 4;
             // 
             // labelComment
             // 
             this.labelComment.AutoSize = true;
-            this.labelComment.Location = new System.Drawing.Point(32, 308);
+            this.labelComment.BackColor = System.Drawing.Color.Transparent;
+            this.labelComment.Font = new System.Drawing.Font("方正少儿_GBK", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelComment.ForeColor = System.Drawing.Color.White;
+            this.labelComment.Location = new System.Drawing.Point(95, 380);
             this.labelComment.Name = "labelComment";
-            this.labelComment.Size = new System.Drawing.Size(41, 12);
+            this.labelComment.Size = new System.Drawing.Size(76, 24);
             this.labelComment.TabIndex = 9;
             this.labelComment.Text = "备注：";
             // 
             // textBoxComments
             // 
-            this.textBoxComments.Location = new System.Drawing.Point(119, 305);
+            this.textBoxComments.Location = new System.Drawing.Point(277, 377);
             this.textBoxComments.Multiline = true;
             this.textBoxComments.Name = "textBoxComments";
             this.textBoxComments.Size = new System.Drawing.Size(168, 76);
-            this.textBoxComments.TabIndex = 10;
+            this.textBoxComments.TabIndex = 5;
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(34, 425);
+            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOK.Image = global::TW_Tally.Properties.Resources.QQ截图20130530082853;
+            this.buttonOK.Location = new System.Drawing.Point(97, 500);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
-            this.buttonOK.TabIndex = 11;
+            this.buttonOK.TabIndex = 6;
             this.buttonOK.Text = "保存";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // buttonSaveAgain
             // 
-            this.buttonSaveAgain.Location = new System.Drawing.Point(246, 425);
+            this.buttonSaveAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSaveAgain.Image = global::TW_Tally.Properties.Resources.QQ截图20130530082853;
+            this.buttonSaveAgain.Location = new System.Drawing.Point(370, 500);
             this.buttonSaveAgain.Name = "buttonSaveAgain";
             this.buttonSaveAgain.Size = new System.Drawing.Size(75, 23);
-            this.buttonSaveAgain.TabIndex = 12;
+            this.buttonSaveAgain.TabIndex = 7;
             this.buttonSaveAgain.Text = "保存再记";
             this.buttonSaveAgain.UseVisualStyleBackColor = true;
             this.buttonSaveAgain.Click += new System.EventHandler(this.buttonSaveAgain_Click);
@@ -243,9 +262,9 @@
             // 
             // pictureBoxType
             // 
-            this.pictureBoxType.Location = new System.Drawing.Point(246, 104);
+            this.pictureBoxType.Location = new System.Drawing.Point(403, 60);
             this.pictureBoxType.Name = "pictureBoxType";
-            this.pictureBoxType.Size = new System.Drawing.Size(127, 111);
+            this.pictureBoxType.Size = new System.Drawing.Size(173, 144);
             this.pictureBoxType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxType.TabIndex = 13;
             this.pictureBoxType.TabStop = false;
@@ -254,7 +273,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 500);
+            this.BackgroundImage = global::TW_Tally.Properties.Resources.Right;
+            this.ClientSize = new System.Drawing.Size(575, 600);
             this.Controls.Add(this.pictureBoxType);
             this.Controls.Add(this.buttonSaveAgain);
             this.Controls.Add(this.buttonOK);

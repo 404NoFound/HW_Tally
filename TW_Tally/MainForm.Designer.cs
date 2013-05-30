@@ -28,99 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonExpense = new System.Windows.Forms.Button();
-            this.splitContainerMain = new System.Windows.Forms.SplitContainer();
-            this.buttonIncomeDetail = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.panelRight = new System.Windows.Forms.Panel();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonIncomeDeta = new System.Windows.Forms.Button();
             this.buttonExpenseDetail = new System.Windows.Forms.Button();
             this.buttonIncome = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
-            this.splitContainerMain.Panel1.SuspendLayout();
-            this.splitContainerMain.SuspendLayout();
+            this.buttonExpense = new System.Windows.Forms.Button();
+            this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonExpense
+            // panelRight
             // 
-            this.buttonExpense.Location = new System.Drawing.Point(13, 25);
-            this.buttonExpense.Name = "buttonExpense";
-            this.buttonExpense.Size = new System.Drawing.Size(75, 23);
-            this.buttonExpense.TabIndex = 0;
-            this.buttonExpense.Text = "支出";
-            this.buttonExpense.UseVisualStyleBackColor = true;
-            this.buttonExpense.Click += new System.EventHandler(this.buttonAddRecord_Click);
+            this.panelRight.BackColor = System.Drawing.Color.Transparent;
+            this.panelRight.BackgroundImage = global::TW_Tally.Properties.Resources.Right;
+            this.panelRight.Location = new System.Drawing.Point(260, 1);
+            this.panelRight.Name = "panelRight";
+            this.panelRight.Size = new System.Drawing.Size(575, 600);
+            this.panelRight.TabIndex = 4;
             // 
-            // splitContainerMain
+            // panelLeft
             // 
-            this.splitContainerMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerMain.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerMain.Name = "splitContainerMain";
+            this.panelLeft.BackgroundImage = global::TW_Tally.Properties.Resources.Left;
+            this.panelLeft.Controls.Add(this.buttonBack);
+            this.panelLeft.Controls.Add(this.buttonIncomeDeta);
+            this.panelLeft.Controls.Add(this.buttonExpenseDetail);
+            this.panelLeft.Controls.Add(this.buttonIncome);
+            this.panelLeft.Controls.Add(this.buttonExpense);
+            this.panelLeft.Location = new System.Drawing.Point(2, 2);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(260, 600);
+            this.panelLeft.TabIndex = 3;
+            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
             // 
-            // splitContainerMain.Panel1
+            // buttonBack
             // 
-            this.splitContainerMain.Panel1.Controls.Add(this.buttonIncomeDetail);
-            this.splitContainerMain.Panel1.Controls.Add(this.buttonExpenseDetail);
-            this.splitContainerMain.Panel1.Controls.Add(this.buttonIncome);
-            this.splitContainerMain.Panel1.Controls.Add(this.buttonExpense);
-            this.splitContainerMain.Size = new System.Drawing.Size(800, 504);
-            this.splitContainerMain.SplitterDistance = 188;
-            this.splitContainerMain.SplitterWidth = 10;
-            this.splitContainerMain.TabIndex = 1;
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.BackgroundImage = global::TW_Tally.Properties.Resources.back1;
+            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBack.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonBack.Location = new System.Drawing.Point(3, 552);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(62, 45);
+            this.buttonBack.TabIndex = 4;
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // buttonIncomeDetail
+            // buttonIncomeDeta
             // 
-            this.buttonIncomeDetail.Location = new System.Drawing.Point(15, 202);
-            this.buttonIncomeDetail.Name = "buttonIncomeDetail";
-            this.buttonIncomeDetail.Size = new System.Drawing.Size(75, 23);
-            this.buttonIncomeDetail.TabIndex = 3;
-            this.buttonIncomeDetail.Text = "收入明细";
-            this.buttonIncomeDetail.UseVisualStyleBackColor = true;
-            this.buttonIncomeDetail.Click += new System.EventHandler(this.buttonIncomeDetail_Click);
+            this.buttonIncomeDeta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonIncomeDeta.Font = new System.Drawing.Font("汉鼎简中楷", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonIncomeDeta.Image = global::TW_Tally.Properties.Resources.QQ截图20130530082853;
+            this.buttonIncomeDeta.Location = new System.Drawing.Point(100, 400);
+            this.buttonIncomeDeta.Name = "buttonIncomeDeta";
+            this.buttonIncomeDeta.Size = new System.Drawing.Size(150, 33);
+            this.buttonIncomeDeta.TabIndex = 3;
+            this.buttonIncomeDeta.Text = "收入详情";
+            this.buttonIncomeDeta.UseVisualStyleBackColor = true;
+            this.buttonIncomeDeta.Click += new System.EventHandler(this.buttonIncomeDeta_Click);
             // 
             // buttonExpenseDetail
             // 
-            this.buttonExpenseDetail.Location = new System.Drawing.Point(14, 160);
+            this.buttonExpenseDetail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonExpenseDetail.Font = new System.Drawing.Font("汉鼎简中楷", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonExpenseDetail.Image = global::TW_Tally.Properties.Resources.QQ截图20130530082853;
+            this.buttonExpenseDetail.Location = new System.Drawing.Point(0, 300);
             this.buttonExpenseDetail.Name = "buttonExpenseDetail";
-            this.buttonExpenseDetail.Size = new System.Drawing.Size(75, 23);
+            this.buttonExpenseDetail.Size = new System.Drawing.Size(150, 33);
             this.buttonExpenseDetail.TabIndex = 2;
-            this.buttonExpenseDetail.Text = "支出明细";
+            this.buttonExpenseDetail.Text = "支出详情";
             this.buttonExpenseDetail.UseVisualStyleBackColor = true;
             this.buttonExpenseDetail.Click += new System.EventHandler(this.buttonExpenseDetail_Click);
             // 
             // buttonIncome
             // 
-            this.buttonIncome.Location = new System.Drawing.Point(105, 24);
+            this.buttonIncome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonIncome.Font = new System.Drawing.Font("汉鼎简中楷", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonIncome.Image = global::TW_Tally.Properties.Resources.QQ截图20130530082853;
+            this.buttonIncome.Location = new System.Drawing.Point(100, 200);
             this.buttonIncome.Name = "buttonIncome";
-            this.buttonIncome.Size = new System.Drawing.Size(75, 23);
+            this.buttonIncome.Size = new System.Drawing.Size(150, 33);
             this.buttonIncome.TabIndex = 1;
-            this.buttonIncome.Text = "收入";
+            this.buttonIncome.Text = "收入记录";
             this.buttonIncome.UseVisualStyleBackColor = true;
             this.buttonIncome.Click += new System.EventHandler(this.buttonIncome_Click);
             // 
+            // buttonExpense
+            // 
+            this.buttonExpense.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonExpense.Font = new System.Drawing.Font("汉鼎简中楷", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonExpense.Image = global::TW_Tally.Properties.Resources.QQ截图20130530082853;
+            this.buttonExpense.Location = new System.Drawing.Point(0, 100);
+            this.buttonExpense.Name = "buttonExpense";
+            this.buttonExpense.Size = new System.Drawing.Size(150, 33);
+            this.buttonExpense.TabIndex = 0;
+            this.buttonExpense.Text = "支出记录";
+            this.buttonExpense.UseVisualStyleBackColor = true;
+            this.buttonExpense.Click += new System.EventHandler(this.buttonExpense_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 504);
-            this.Controls.Add(this.splitContainerMain);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackgroundImage = global::TW_Tally.Properties.Resources.界面1;
+            this.ClientSize = new System.Drawing.Size(834, 601);
+            this.Controls.Add(this.panelRight);
+            this.Controls.Add(this.panelLeft);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Money";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.splitContainerMain.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
-            this.splitContainerMain.ResumeLayout(false);
+            this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.Panel panelRight;
         private System.Windows.Forms.Button buttonExpense;
-        private System.Windows.Forms.SplitContainer splitContainerMain;
         private System.Windows.Forms.Button buttonIncome;
         private System.Windows.Forms.Button buttonExpenseDetail;
-        private System.Windows.Forms.Button buttonIncomeDetail;
+        private System.Windows.Forms.Button buttonIncomeDeta;
+        private System.Windows.Forms.Button buttonBack;
+
+
 
     }
 }

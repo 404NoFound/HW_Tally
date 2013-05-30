@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label Label_Password;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegister));
             this.label_PasswordCheck = new System.Windows.Forms.Label();
             this.textBoxPasswordCheck = new System.Windows.Forms.TextBox();
             this.button_Reg = new System.Windows.Forms.Button();
@@ -90,7 +91,7 @@
             this.panel_Reg.Controls.Add(this.TextBoxNewPassword);
             this.panel_Reg.Controls.Add(this.label_PasswordCheck);
             this.panel_Reg.Controls.Add(this.textBoxPasswordCheck);
-            this.panel_Reg.Location = new System.Drawing.Point(17, 12);
+            this.panel_Reg.Location = new System.Drawing.Point(5, 12);
             this.panel_Reg.Name = "panel_Reg";
             this.panel_Reg.Size = new System.Drawing.Size(292, 200);
             this.panel_Reg.TabIndex = 8;
@@ -147,6 +148,7 @@
             this.Controls.Add(this.panel_Reg);
             this.Controls.Add(this.button_Reg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "密码设置";
