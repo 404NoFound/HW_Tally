@@ -138,7 +138,7 @@
             // labelSource
             // 
             resources.ApplyResources(this.labelSource, "labelSource");
-            this.labelSource.BackColor = System.Drawing.Color.Black;
+            this.labelSource.BackColor = System.Drawing.Color.Transparent;
             this.labelSource.ForeColor = System.Drawing.Color.White;
             this.labelSource.Name = "labelSource";
             // 

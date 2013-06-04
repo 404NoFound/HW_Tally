@@ -74,9 +74,9 @@ namespace TW_Tally.Forms
         {
            
             //////////////////////////////////////////////////////////////////////////
-            string pattern = @"^[A-Za-z0-9]{6,20}$";
+            string pattern = @"^[A-Za-z0-9]{6,}$";
             Match mPassWord = Regex.Match(this.TextBoxNewPassword.Text, pattern);
-            //////////////////////////////////////////////////////////////////////////
+          
             //旧密码MD5    
             string sOldPassword = textBoxOldPassword.Text.Trim();
             sOldPassword += "abc";

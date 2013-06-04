@@ -79,7 +79,7 @@
             this.textBoxCost.Name = "textBoxCost";
             this.textBoxCost.Size = new System.Drawing.Size(121, 21);
             this.textBoxCost.TabIndex = 0;
-            this.textBoxCost.Text = "0.00";
+            this.textBoxCost.Text = "0";
             // 
             // labelType
             // 

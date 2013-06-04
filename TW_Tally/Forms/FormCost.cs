@@ -81,36 +81,37 @@ namespace TW_Tally.Forms
 
         private void buttonOK_Click(object sender, EventArgs e)
         {   
-
-           DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
-            DateTime dt=new DateTime();
-          //  dt = dateTimePickerCost.Value;
-            //dt.Hour = comboBoxHours.SelectedItem;
-           // dt.Minute = comboBoxMinutes.SelectedItem;
-            
-
-            newCostLine["Cost"]=textBoxCost.Text.Trim();
-            newCostLine["Class"]=comboBoxBig.Text.Trim();
-            newCostLine["Event"] = comboBoxSmall.Text.Trim();
-            newCostLine["Merchant"] = comboBoxShop.Text.Trim();
-            newCostLine["CostData"] = dateTimePickerCost.Value;
-            newCostLine["Comments"] = textBoxComments.Text.Trim();
-            try
+            if (Convert.ToInt32(textBoxCost.Text.Trim())>0)
             {
-                
-               userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
-               this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
-               FormMessageAutoClose fm = new FormMessageAutoClose();
-               fm.setLabel("添加成功返回主界面。");
-               fm.ShowDialog();
-               //this.DialogResult = DialogResult.OK;
-               this.Close();
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+                DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
+                newCostLine["Cost"] = Convert.ToInt32(textBoxCost.Text.Trim());
+                newCostLine["Class"] = comboBoxBig.Text.Trim();
+                newCostLine["Event"] = comboBoxSmall.Text.Trim();
+                newCostLine["Merchant"] = comboBoxShop.Text.Trim();
+                newCostLine["CostData"] = dateTimePickerCost.Value;
+                newCostLine["Comments"] = textBoxComments.Text.Trim();
+                try
+                {
+
+                    userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
+                    this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
+                    FormMessageAutoClose fm = new FormMessageAutoClose();
+                    fm.setLabel("添加成功返回主界面。");
+                    fm.ShowDialog();
+                    //this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             
+            } 
+            else
+            {
+                MessageBox.Show("请输入数据");
+            }
+          
         }
 
         private void FormCost_Activated(object sender, EventArgs e)
@@ -126,8 +127,10 @@ namespace TW_Tally.Forms
         
         private void buttonSaveAgain_Click(object sender, EventArgs e)
         {
-           DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
-            newCostLine["Cost"] = textBoxCost.Text.Trim();
+            if (Convert.ToInt32(textBoxCost.Text.Trim()) > 0)
+        {
+            DataRow newCostLine = userDBDataSet.Tables["UserExpense"].NewRow();
+            newCostLine["Cost"] = Convert.ToInt32(textBoxCost.Text.Trim());
             newCostLine["Class"] = comboBoxBig.Text.Trim();
             newCostLine["Event"] = comboBoxSmall.Text.Trim();
             newCostLine["Merchant"] = comboBoxShop.Text.Trim();
@@ -135,25 +138,29 @@ namespace TW_Tally.Forms
             newCostLine["Comments"] = textBoxComments.Text.Trim();
             try
             {
-                
-               userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
-               this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
+
+                userDBDataSet.Tables["UserExpense"].Rows.Add(newCostLine);
+                this.userExpenseTableAdapter.Update(this.userDBDataSet.UserExpense);
                 FormMessageAutoClose fm = new FormMessageAutoClose();
                 fm.setLabel("添加成功。");
                 fm.ShowDialog();
-                textBoxCost.Text = "";
-                comboBoxBig.Text = "";
-                comboBoxSmall.Text = "";
-                comboBoxShop.Text = "";
+                textBoxCost.Text = "0.00";
+
                 dateTimePickerCost.Value = DateTime.Now;
                 textBoxComments.Text = "";
-               
+
 
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        } 
+        else
+        {
+            MessageBox.Show("请输入数据");
+        }
+           
         }
 
         private void comboBoxSmall_TextChanged(object sender, EventArgs e)

@@ -68,6 +68,8 @@ namespace TW_Tally.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            if (Convert.ToInt32(moneyTextBox.Text)>0)
+          {
             DataRow newIncomeLine = userDBDataSet.Tables["UserIncome"].NewRow();
             newIncomeLine["Money"] = moneyTextBox.Text.Trim();
             newIncomeLine["Datetime"] = datetimeDateTimePicker.Value;
@@ -90,6 +92,12 @@ namespace TW_Tally.Forms
             {
                 MessageBox.Show(ex.ToString());
             }
+          }
+            else
+            {
+                MessageBox.Show("请输入数据");
+            }
+           
 
         }
 
@@ -113,34 +121,41 @@ namespace TW_Tally.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            DataRow newIncomeLine = userDBDataSet.Tables["UserIncome"].NewRow();
-            newIncomeLine["Money"] = moneyTextBox.Text.Trim();
-            newIncomeLine["Datetime"] = datetimeDateTimePicker.Value;
-            newIncomeLine["Source"] = comboBoxSource.Text;
-            newIncomeLine["Comments"] = commentsTextBox.Text.Trim();
-            newIncomeLine["Type"] = comboBoxType.Text.Trim();
-
-            try
+            if (Convert.ToInt32(moneyTextBox.Text) > 0)
             {
+                DataRow newIncomeLine = userDBDataSet.Tables["UserIncome"].NewRow();
+                newIncomeLine["Money"] = Convert.ToInt32(moneyTextBox.Text.Trim());
+                newIncomeLine["Datetime"] = datetimeDateTimePicker.Value;
+                newIncomeLine["Source"] = comboBoxSource.Text;
+                newIncomeLine["Comments"] = commentsTextBox.Text.Trim();
+                newIncomeLine["Type"] = comboBoxType.Text.Trim();
 
-                userDBDataSet.Tables["UserIncome"].Rows.Add(newIncomeLine);
-                this.userIncomeTableAdapter.Update(this.userDBDataSet.UserIncome);
-                FormMessageAutoClose fm = new FormMessageAutoClose();
-                fm.setLabel("添加成功返回主界面。");
-                fm.ShowDialog();
-                //this.DialogResult = DialogResult.OK;
-                this.Close();
+                try
+                {
 
-                moneyTextBox.Text = "0.00";
-                datetimeDateTimePicker.Value = DateTime.Now;
-                commentsTextBox.Text = "";
-            }
-            catch (System.Exception ex)
+                    userDBDataSet.Tables["UserIncome"].Rows.Add(newIncomeLine);
+                    this.userIncomeTableAdapter.Update(this.userDBDataSet.UserIncome);
+                    FormMessageAutoClose fm = new FormMessageAutoClose();
+
+
+                    //this.DialogResult = DialogResult.OK;
+
+
+                    moneyTextBox.Text = "0.00";
+                    datetimeDateTimePicker.Value = DateTime.Now;
+                    commentsTextBox.Text = "";
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+            } 
+            else
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("请输入数据");
             }
-
+           
         }
 
         private void FormIncome_Activated(object sender, EventArgs e)
